@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bus Ticket Booking Prototype</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #1e1e1e; color: #fff; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+    .phone { width: 340px; background: #2c2f36; border-radius: 24px; padding: 24px; box-shadow: 0 12px 30px rgba(0,0,0,0.5); }
+    h2 { color: #38bdf8; text-align: center; margin-top: 0; }
+    input { width: 100%; box-sizing: border-box; padding: 10px; margin: 8px 0; border-radius: 8px; border: 1px solid #4b5563; background: #1f2937; color: #fff; }
+    button { width: 100%; padding: 12px; border: none; border-radius: 8px; background: #0284c7; color: #fff; font-weight: bold; cursor: pointer; margin-top: 8px; }
+    button:hover { background: #0369a1; }
+    .card { background: #374151; padding: 14px; border-radius: 10px; margin-top: 14px; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <div class="phone">
+    <div id="loginScreen">
+      <h2>Bus Ticket Booking</h2>
+      <p style="text-align:center;color:#fcd34d;">Book Your Journey Easily</p>
+      <input type="text" placeholder="Username" value="student01" />
+      <input type="password" placeholder="Password" value="••••••••" />
+      <button onclick="showHome()">Login / Get Started</button>
+    </div>
+    <div id="homeScreen" class="hidden">
+      <h2>Search Buses</h2>
+      <input type="text" placeholder="From" value="Chennai" />
+      <input type="text" placeholder="To" value="Bengaluru" />
+      <input type="date" value="2026-08-15" />
+      <input type="number" placeholder="Passengers" value="1" />
+      <button onclick="document.getElementById('results').classList.remove('hidden')">Search Buses</button>
+      <div id="results" class="card hidden">
+        <strong>Express Travels</strong><br />
+        Fare: ₹550 | Departure: 08:00 AM<br />
+        <small>18 Seats Available</small>
+        <button onclick="alert('Ticket Booked on Express Travels!')">Book Now</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    function showHome() {
+      document.getElementById('loginScreen').classList.add('hidden');
+      document.getElementById('homeScreen').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>

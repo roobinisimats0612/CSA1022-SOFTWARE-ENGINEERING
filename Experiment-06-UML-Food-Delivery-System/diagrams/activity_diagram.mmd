@@ -1,0 +1,10 @@
+flowchart LR
+    S((Start)) --> A[Login]
+    A --> B[Browse Restaurant & Menu]
+    B --> C[Place Order]
+    C --> D[Make Payment]
+    D --> E{Payment Valid?}
+    E -- Yes --> F[Restaurant Prepares Food & Agent Delivers]
+    E -- No --> D
+    F --> G[Order Delivered]
+    G --> Z((End))

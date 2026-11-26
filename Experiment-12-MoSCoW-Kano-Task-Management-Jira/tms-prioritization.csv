@@ -1,0 +1,5 @@
+Key,Requirement,MoSCoW,Kano,Status
+TMS1-2,User Login and Role Assignment,Must-Have,Basic,To Do
+TMS1-3,Task Creation and Assignment,Must-Have,Basic,In Progress
+TMS1-4,Task Prioritization and Deadlines,Should-Have,Performance,Done
+TMS1-5,Progress Tracking and Reporting,Could-Have,Excitement,To Do

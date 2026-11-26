@@ -1,0 +1,7 @@
+Key,Requirement,MoSCoW,Kano,Status
+OLP-1,Course Enrollment and Registration,Must-Have,Basic,To Do
+OLP-2,Video Lecture Streaming,Must-Have,Performance,To Do
+OLP-3,Interactive Quizzes and Assignments,Should-Have,Performance,In Progress
+OLP-4,Progress Tracking Dashboard,Should-Have,Performance,Done
+OLP-5,Peer-to-Peer Discussion Forums,Could-Have,Excitement,Done
+OLP-6,Certificate Generation,Could-Have,Excitement,Done

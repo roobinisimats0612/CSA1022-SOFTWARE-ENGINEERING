@@ -1,0 +1,18 @@
+flowchart TD
+    N1([1 Start]) --> N2{2 Predicate 1}
+    N2 -- T --> N3{3 Predicate 2}
+    N2 -- F --> N4[4]
+    N3 -- T --> N5[5]
+    N3 -- F --> N6[6]
+    N5 --> N7{7 Predicate 3}
+    N6 --> N7
+    N7 -- T --> N8[8]
+    N7 -- F --> N9[9]
+    N8 --> N10{10 Predicate 4}
+    N9 --> N10
+    N10 -- T --> N11[11]
+    N10 -- F --> N12{12 Predicate 5}
+    N11 --> N13([13 End])
+    N12 -- T --> N4
+    N12 -- F --> N13
+    N4 --> N13

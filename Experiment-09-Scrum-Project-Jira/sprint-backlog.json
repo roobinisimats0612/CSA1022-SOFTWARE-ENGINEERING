@@ -1,0 +1,38 @@
+{
+  "project": "scrum project",
+  "key": "SP",
+  "sprint": "SP Sprint 1",
+  "duration": "1 week",
+  "items": [
+    {
+      "key": "SP-1",
+      "summary": "Create User Registration Page",
+      "priority": "Highest",
+      "end_status": "TO DO"
+    },
+    {
+      "key": "SP-2",
+      "summary": "Develop API for Login",
+      "priority": "Highest",
+      "end_status": "TO DO"
+    },
+    {
+      "key": "SP-3",
+      "summary": "Design Home Page",
+      "priority": "Medium",
+      "end_status": "IN PROGRESS"
+    },
+    {
+      "key": "SP-4",
+      "summary": "Test Login Functionality",
+      "priority": "Low",
+      "end_status": "IN REVIEW"
+    },
+    {
+      "key": "SP-5",
+      "summary": "Deploy Application",
+      "priority": "Lowest",
+      "end_status": "DONE"
+    }
+  ]
+}

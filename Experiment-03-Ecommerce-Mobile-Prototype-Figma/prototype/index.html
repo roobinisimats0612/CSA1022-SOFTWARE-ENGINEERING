@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ShopFlow E-Commerce Prototype</title>
+  <style>
+    body { font-family: system-ui, sans-serif; background: #e5e7eb; display: flex; justify-content: center; padding: 24px; }
+    .phone { width: 360px; background: #fff; border-radius: 28px; border: 6px solid #111827; padding: 18px; box-shadow: 0 10px 30px rgba(0,0,0,0.18); }
+    .nav { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+    .nav button { flex: 1; padding: 6px; font-size: 11px; border: none; border-radius: 6px; background: #dbeafe; color: #1d4ed8; cursor: pointer; }
+    .nav button.active { background: #2563eb; color: #fff; }
+    .screen { display: none; }
+    .screen.active { display: block; }
+    .banner { background: linear-gradient(135deg,#1d4ed8,#3b82f6); color: #fff; padding: 14px; border-radius: 12px; margin: 10px 0; }
+    .card { border: 1px solid #e5e7eb; border-radius: 10px; padding: 12px; margin: 8px 0; }
+    .cta { width: 100%; padding: 10px; background: #2563eb; color: #fff; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; margin-top: 8px; }
+  </style>
+</head>
+<body>
+  <div class="phone">
+    <div class="nav">
+      <button class="active" onclick="go(0,this)">1.Home</button>
+      <button onclick="go(1,this)">2.List</button>
+      <button onclick="go(2,this)">3.Detail</button>
+      <button onclick="go(3,this)">4.Cart</button>
+      <button onclick="go(4,this)">5.Pay</button>
+      <button onclick="go(5,this)">6.Done</button>
+    </div>
+    <div class="screen active"><h3>ShopFlow</h3><div class="banner"><strong>Summer Sale</strong><br>Up to 50% OFF</div><div class="card">Sony WH-1000XM5 — $299</div><button class="cta" onclick="goIdx(1)">Browse Products</button></div>
+    <div class="screen"><h3>Product Listing</h3><div class="card"><strong>Sony WH-1000XM5</strong><br>$299 ★ 4.8</div><div class="card"><strong>Nike Air Max 270</strong><br>$129 ★ 4.6</div><button class="cta" onclick="goIdx(2)">View Headphones</button></div>
+    <div class="screen"><h3>Sony WH-1000XM5</h3><p>Color: Midnight Black | Qty: 1</p><p><strong>$299</strong> (25% OFF)</p><button class="cta" onclick="goIdx(3)">Add to Cart</button></div>
+    <div class="screen"><h3>My Cart (2 Items)</h3><div class="card">Sony WH-1000XM5 — $299.00</div><div class="card">Nike Air Max 270 x2 — $258.00</div><p><strong>Total: $557.00</strong></p><button class="cta" onclick="goIdx(4)">Proceed to Checkout</button></div>
+    <div class="screen"><h3>Checkout</h3><p>Deliver to: Aryan Sharma, Gurugram</p><div class="card">Payment: ● UPI (Google Pay / PhonePe)</div><button class="cta" onclick="goIdx(5)">Place Order</button></div>
+    <div class="screen"><h3>Order Confirmed!</h3><p>Order ID: <strong>#SF-2026-8841</strong></p><p>Estimated Delivery: 3 Days</p><button class="cta" onclick="goIdx(0)">Continue Shopping</button></div>
+  </div>
+  <script>
+    const screens = document.querySelectorAll('.screen');
+    const btns = document.querySelectorAll('.nav button');
+    function go(i, btn){ screens.forEach((s,idx)=>s.classList.toggle('active',idx===i)); btns.forEach((b,idx)=>b.classList.toggle('active',idx===i)); }
+    function goIdx(i){ go(i, btns[i]); }
+  </script>
+</body>
+</html>

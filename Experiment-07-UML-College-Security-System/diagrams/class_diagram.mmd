@@ -1,0 +1,46 @@
+classDiagram
+    class Admin {
+        -int adminId
+        -string username
+        -string password
+        +assignDuty()
+        +approveLeave()
+        +generateReport()
+    }
+    class SecurityPersonnel {
+        -int securityId
+        -string name
+        -string phone
+        -string designation
+        +viewSchedule()
+        +applyLeave()
+    }
+    class DutySchedule {
+        -int dutyId
+        -string date
+        -string startTime
+        -string endTime
+        -string location
+        +assignDuty()
+        +updateDuty()
+    }
+    class Leave {
+        -int leaveId
+        -string leaveDate
+        -string reason
+        -string status
+        +applyLeave()
+        +approveLeave()
+    }
+    class Salary {
+        -int salaryId
+        -double basicSalary
+        -int totalDuties
+        -int leaveCount
+        -double finalSalary
+        +calculateSalary()
+    }
+    Admin "1" --> "*" DutySchedule
+    SecurityPersonnel "1" --> "*" DutySchedule
+    SecurityPersonnel "1" --> "*" Leave
+    SecurityPersonnel "1" --> "*" Salary

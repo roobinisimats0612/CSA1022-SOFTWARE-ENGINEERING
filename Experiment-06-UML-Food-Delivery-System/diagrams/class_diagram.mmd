@@ -1,0 +1,40 @@
+classDiagram
+    class Customer {
+        -int customerId
+        -string name
+        -int phone
+        +login()
+        +placeOrder()
+    }
+    class Order {
+        -int orderId
+        -int orderDate
+        -int totalAmount
+        +createOrder()
+        +cancelOrder()
+    }
+    class Restaurant {
+        -int restaurantId
+        -string restaurantName
+        -string location
+        +manageMenu()
+        +updateMenu()
+    }
+    class Menu {
+        -int menuId
+        -string itemName
+        -double price
+        +addItem()
+        +removeItem()
+    }
+    class Payment {
+        -int paymentId
+        -double amount
+        -string paymentStatus
+        +makePayment()
+        +verifyPayment() bool
+    }
+    Customer "1" --> "*" Order
+    Restaurant "1" --> "1..*" Menu
+    Order "*" --> "1" Restaurant
+    Order "1" --> "1" Payment

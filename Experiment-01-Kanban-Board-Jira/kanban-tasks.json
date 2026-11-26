@@ -1,0 +1,37 @@
+{
+  "project": "Task Management Board",
+  "key": "TMB",
+  "template": "Kanban (Team-managed)",
+  "columns": [
+    "TO DO",
+    "IN PROGRESS",
+    "DONE"
+  ],
+  "tasks": [
+    {
+      "key": "TMB-3",
+      "summary": "Restaurant Listing",
+      "status": "TO DO"
+    },
+    {
+      "key": "TMB-4",
+      "summary": "Add Food to Cart",
+      "status": "TO DO"
+    },
+    {
+      "key": "TMB-2",
+      "summary": "User Registration",
+      "status": "IN PROGRESS"
+    },
+    {
+      "key": "TMB-5",
+      "summary": "Payment Integration",
+      "status": "DONE"
+    },
+    {
+      "key": "TMB-1",
+      "summary": "Design Login Page",
+      "status": "DONE"
+    }
+  ]
+}

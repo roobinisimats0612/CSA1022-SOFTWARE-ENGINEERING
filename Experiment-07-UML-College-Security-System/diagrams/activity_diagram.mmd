@@ -1,0 +1,12 @@
+flowchart LR
+    S((Start)) --> A[Login]
+    A --> B[Select Security Personnel]
+    B --> C[Assign Duty]
+    C --> D{Leave Applied?}
+    D -- Yes --> E[Approve Leave]
+    D -- No --> F[Record Attendance]
+    E --> F
+    F --> G[Calculate Salary]
+    G --> H[Generate Report]
+    H --> I[Logout]
+    I --> Z((End))
